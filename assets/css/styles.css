@@ -1,73 +1,31 @@
-:root {
-    --primary-color: #0A1128;
-    --white-color: #FFF;
-    --gap : 3rem;
+header.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    align-items: center;
+    height: 100vh;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.intro-text, .intro-img {
+    position: relative;
+    top: -6.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-html {
-    font-size: 62.5%; /* = 10px */
+.intro-img img {
+    max-width: 100%;
+    height: auto;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
-    color: var(--primary-color);
+.top-jobs {
+    height: 100vh;
+    max-width: 64rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-h1 {
-    font-size: 6rem;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-size: 5.5rem;
-}
-
-h3 {
-    font-size: 5rem;
-}
-
-h4 {
-    font-size: 4.5rem;
-}
-
-h5 {
-    font-size: 4rem;
-}
-
-h6 {
-    font-size: 3.5rem;
-}
-
-.main-bg {
-    background-image: url('../imgs/main-bg.svg');
-    background-size: cover;
-    background-position: center center;
-    color: var(--white-color);
-    /* background by SVGBackgrounds.com */
-}
-
-.white-bg {
-    background-color: var(--white-color);
-}
-
-.main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--gap);
-}
-
-.section {
-    min-height: 100vh;
-}
