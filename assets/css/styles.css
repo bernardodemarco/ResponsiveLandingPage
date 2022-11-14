@@ -3,7 +3,7 @@ header.intro-content {
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .intro-text, .intro-img {
@@ -20,12 +20,69 @@ header.intro-content {
 }
 
 .top-jobs {
-    height: 100vh;
+    min-height: 100vh;
     max-width: 64rem;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
 }
 
+.portifolio {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portifolio-content {
+    counter-reset: grid-counter;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+.portifolio-content h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-bottom: 2rem;
+    padding-left: 5rem;
+}
+
+.portifolio-content h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg);
+}
+
+.portifolio-heading {
+    margin-bottom: 1rem;
+}
+
+.portifolio-description {
+    padding-bottom: 5rem;
+}
+
+#work .portifolio-heading {
+    margin-bottom: 10rem;
+}
+
+.portifolio-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.portifolio-img img {
+    transition: all 300ms ease-in-out;
+}
+
+.portifolio-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
