@@ -56,3 +56,29 @@ a {
 p {
     margin-bottom: 3rem;
 }
+
+.pricing-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    padding: 1rem;
+    text-align: left;
+    border: 0.1rem solid var(--light-gray-color);
+}
+
+thead th, tfoot td {
+    background-color: var(--light-gray-color);
+}
+
+table caption {
+    text-align: left;
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
